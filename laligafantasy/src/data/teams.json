@@ -1,0 +1,84 @@
+{
+    "teams": [
+        {
+            "cover": "/teams/RealMadrid.png", 
+            "title": "Real-Madrid"
+        }, 
+        {
+            "cover": "/teams/Barcelona.png", 
+            "title": "Barcelona"
+        },
+        {
+            "cover": "/teams/Girona.png", 
+            "title": "Girona"
+        },
+        {
+            "cover": "/teams/AtleticoMadrid.png", 
+            "title": "Atletico-Madrid"
+        },
+        {
+            "cover": "/teams/AthleticClub.png", 
+            "title": "Athletic-Club"
+        },
+        {
+            "cover": "/teams/RealSociedad.png", 
+            "title": "Real-Sociedad"
+        },
+        {
+            "cover": "/teams/RealBetis.png", 
+            "title": "Real-Betis"
+        }, 
+        {
+            "cover": "/teams/Villarreal.png", 
+            "title": "Villarreal"
+        },
+        {
+            "cover": "/teams/Valencia.png", 
+            "title": "Valencia"
+        },
+        {
+            "cover": "/teams/Alaves.png", 
+            "title": "Alaves"
+        },
+        {
+            "cover": "/teams/Osasuna.png", 
+            "title": "Osasuna"
+        },
+        {
+            "cover": "/teams/Getafe.png", 
+            "title": "Getafe"
+        },
+        {
+            "cover": "/teams/CeltaVigo.png", 
+            "title": "Celta-Vigo"
+        },
+        {
+            "cover": "/teams/Sevilla.png", 
+            "title": "Sevilla"
+        },
+        {
+            "cover": "/teams/Mallorca.png", 
+            "title": "Mallorca"
+        },
+        {
+            "cover": "/teams/LasPalmas.png", 
+            "title": "Las-Palmas"
+        },
+        {
+            "cover": "/teams/RayoVallecano.png", 
+            "title": "Rayo-Vallecano"
+        },
+        {
+            "cover": "/teams/Cadiz.png", 
+            "title": "Cadiz"
+        },
+        {
+            "cover": "/teams/Almeria.png", 
+            "title": "Almeria"
+        },
+        {
+            "cover": "/teams/Granada.png", 
+            "title": "Granada"
+        }
+    ]
+}
