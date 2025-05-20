@@ -1,7 +1,7 @@
 from sklearn.ensemble import RandomForestClassifier
-from sklearn.metrics import precision_score
-from sklearn.metrics import accuracy_score
+from sklearn.metrics import precision_score, accuracy_score
 import pandas as pd
+
 matches = pd.read_csv("matches.csv", index_col=0)
 matches["date"] = pd.to_datetime(matches["date"])
 matches["venue_code"] = matches["venue"].astype("category").cat.codes
@@ -10,19 +10,28 @@ matches["hour"] = matches["time"].str.replace(
     ":.+", "", regex=True).astype("int")
 matches["day_code"] = matches["date"].dt.dayofweek
 matches["target"] = (matches["result"] == "W").astype("int")
+
 rf = RandomForestClassifier(
     n_estimators=100, min_samples_split=10, random_state=1)
+
 train = matches[matches["date"] < '2024-01-01']
 test = matches[matches["date"] > '2024-01-01']
 predictors = ["venue_code", "opp_code", "hour", "day_code"]
+
 rf.fit(train[predictors], train["target"])
-RandomForestClassifier(min_samples_split=10, n_estimators=100, random_state=1)
+
 preds = rf.predict(test[predictors])
-acc = accuracy_score(test["target"], preds)
-acc
+
+# Calculate precision and accuracy
+precision = precision_score(test["target"], preds)
+accuracy = accuracy_score(test["target"], preds)
+
 combined = pd.DataFrame(dict(actual=test["target"], prediction=preds))
 pd.crosstab(index=combined["actual"], columns=combined["prediction"])
-precision_score(test["target"], preds)
+
+print(f"Precision: {precision * 100:.2f}%")
+print(f"Accuracy: {accuracy * 100:.2f}%")
+
 grouped_matches = matches.groupby("team")
 group = grouped_matches.get_group("Barcelona").sort_values("date")
 
@@ -84,3 +93,7 @@ combined
 merged = combined.merge(
     combined, left_on=["date", "new_team"], right_on=["date", "opponent"])
 merged
+
+print(f"Precision: {precision * 100:.2f}%")
+print(f"Accuracy: {accuracy * 100:.2f}%")
+
