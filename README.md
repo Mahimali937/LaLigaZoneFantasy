@@ -1,6 +1,6 @@
-# LaLigaZone
+# La Liga Zone Fantasy
 
-LaLigaZone is a comprehensive project designed to scrape match statistics for over 700 players, manipulate and present the data dynamically, and predict match outcomes using machine learning. The project is divided into four main components: Backend, Frontend, Data Scraping, and Machine Learning.
+La Liga Zone Fantasy is a comprehensive project designed to scrape match statistics for over 700 players, manipulate and present the data dynamically, and predict match outcomes using machine learning. The project is divided into four main components: Backend, Frontend, Data Scraping, and Machine Learning.
 
 <img width="1437" alt="Screenshot 2024-11-02 at 9 17 34 PM" src="https://github.com/user-attachments/assets/f764801c-da99-4f3d-901d-97d0ba8c1536">
 
